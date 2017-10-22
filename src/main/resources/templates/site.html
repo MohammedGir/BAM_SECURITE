@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+
+
+</head>
+<body >
+
+
+<div th:replace="fragments/header :: header">
+    <div class="page-header"></div>
+</div>
+
+<div class="wrapper row2">
+        <div class="container">
+        <div class="hoc container clear row">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <form class="row form-horizontal" action="#" method="post">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="region" class="col-md-4 control-label">Région</label>
+                                    <div class="col-md-8">
+                                        <select class="form-control" id="region" name="id_region">
+                                            <option selected="selected">All</option>
+                                            <option th:each="region : ${regions}" th:value="${region.id}" th:text="${region.nom}"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="ville" class="col-md-4 control-label">Site</label>
+                                    <div class="col-md-8">
+                                        <select class="form-control" id="ville" name="id_ville">
+                                            <option th:each="ville : ${villes}" th:value="${ville.id}" th:text="${ville.nom}"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <ul class="nospace inline pushright">
+                            <li><a class="btn" th:href="@{/site/add}">Ajouter un nouveau Site</a></li></ul>
+                        <br/>
+                        <table class="table-striped" id="dataTable" >
+                            <caption><h3>Liste Site</h3></caption>
+                            <thead class="drop">
+                            <tr class="drop" >
+                                <th>#</th>
+                                <th>Nom de Site</th>
+                                <th>Code Postal</th>
+                                <th>Type</th>
+                                <th>Ville</th>
+                            </tr>
+                            </thead>
+                            <tbody >
+                            <tr th:each="site : ${sites}">
+                                <td th:text="${site.id}"></td>
+                                <td th:text="${site.nom}"></td>
+                                <td th:text="${site.cp}"></td>
+                                <td th:text="${site.type}"></td>
+                                <td th:text="${site?.ville.nom}"></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer">
+    <div class="page-footer"></div>
+</div>
+
+
+<script type="text/javascript" th:src="@{../layout/scripts/jquery.backtotop.js}"></script>
+<script type="text/javascript" th:src="@{../layout/scripts/jquery.mobilemenu.js}"></script>
+<script type="text/javascript" th:src="@{../local/js/site.js}"></script>
+</body>
+</html>

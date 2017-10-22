@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body id="top">
+<div class="page-header" th:fragment="header">
+    <div class="wrapper row0">
+        <div id="topbar" class="hoc clear">
+            <!-- ################################################################################################ -->
+
+            <div class="fl_right">
+                <ul class="nospace">
+                    <li><i class="fa fa-phone"></i> +212 656557890</li>
+                    <li><i class="fa fa-envelope-o"></i> manar@domain.com</li>
+                </ul>
+            </div>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <div id="logo" class="fl_left">
+                <h1><a th:href="@{/index}">POSTE MAROC</a></h1>
+
+            </div>
+            <!-- ################################################################################################ -->
+            <nav id="mainav" class="fl_right">
+                <ul class="clear">
+                    <li class="active"><a th:href="@{/index}">Accueil</a></li>
+                    <li><a class="drop" href="#">Sites</a>
+                        <ul class="drop">
+                            <li><a class="drop" th:href="@{/site/all}">Consulter</a></li>
+                            <li><a class="drop" th:href="@{/site/add}">Ajouter</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="drop" href="#">Tournées</a>
+                        <ul class="drop">
+                            <li><a class="drop" th:href="@{/tournee/all}">Consulter</a></li>
+                            <li><a class="drop" th:href="@{/tournee/add}">Ajouter</a></li>
+                        </ul>
+                    </li>
+                    <li ><a class="drop" href="#">RH</a>
+                        <ul class="drop" href="#">
+                            <li><a class="drop" href="#">Personnel</a></li>
+                            <li><a class="drop" th:href="@{/facteur/all}">Facteurs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Cyclo</a>
+                        <ul class="drop">
+                            <li><a class="drop" th:href="@{/cyclo/all}">Consulter</a></li>
+                            <li><a class="drop" th:href="@{/cyclo/add}">Ajouter</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ZND</a></li>
+                    <li><a href="#">BLS</a>
+                        <ul class="drop">
+                            <li><a class="drop" th:href="@{/bls/all}">Consulter</a></li>
+                            <li><a class="drop" th:href="@{/bls/add}">Ajouter</a></li>
+                        </ul>
+                    </li>
+                    <li><a th:href="@{/region/all}">Régions</a></li>
+                    <li><a th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </nav>
+            <!-- ################################################################################################ -->
+        </header>
+    </div>
+</div>
+<!-- ################################################################################################ -->
+
+</body>
+</html>

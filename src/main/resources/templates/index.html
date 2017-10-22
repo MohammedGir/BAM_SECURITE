@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+
+
+</head>
+<body >
+
+
+<div th:replace="fragments/header :: header">
+    <div class="page-header"></div>
+</div>
+
+<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+    <div id="pageintro" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <article>
+            <div>
+                <h1 class="heading">POSTE MAROC</h1>
+                <p class="heading">Le contact qui vous facilite la vie.</p>
+
+
+            </div>
+
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <ul class="nospace group services">
+            <li class="one_third first btmspace-30">
+                <article><a th:href="@{/tournee/all}"><i class="fa fa-4x fa-circle-o"></i></a>
+                    <h6 class="heading font-x1">Tournées</h6>
+
+                </article>
+            </li>
+            <li class="one_third btmspace-30">
+                <article><a th:href="@{/cyclo/all}"><i class="fa fa-4x fa-motorcycle"></i></a>
+                    <h6 class="heading font-x1">Cyclos</h6>
+                    <p></p>
+                </article>
+            </li>
+            <li class="one_third btmspace-30">
+                <article><a th:href="@{/facteur/all}"><i class="fa fa-4x fa-users"></i></a>
+                    <h6 class="heading font-x1">Facteurs</h6>
+                    <p></p>
+                </article>
+            </li>
+            <li class="one_third first">
+                <article><a th:href="@{/bls/all}"><i class="fa fa-4x fa-archive"></i></a>
+                    <h6 class="heading font-x1">Boite à Lettre</h6>
+                    <p></p>
+                </article>
+            </li>
+            <li class="one_third">
+                <article><a th:href="@{site/all}"><i class="fa fa-4x fa-institution"></i></a>
+                    <h6 class="heading font-x1">Site</h6>
+                    <p></p>
+                </article>
+            </li>
+            <li class="one_third">
+                <article><a th:href="@{region/all}"><i class="fa fa-4x fa-qrcode"></i></a>
+                    <h6 class="heading font-x1">Régions</h6>
+                    <p></p>
+                </article>
+            </li>
+        </ul>
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+    </main>
+</div>
+
+<div th:replace="fragments/footer :: footer">
+    <div class="page-footer"></div>
+</div>
+
+
+<script type="text/javascript" th:src="@{../layout/scripts/jquery.backtotop.js}"></script>
+<script type="text/javascript" th:src="@{../layout/scripts/jquery.mobilemenu.js}"></script>
+</body>
+</html>
